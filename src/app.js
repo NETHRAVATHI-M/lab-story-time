@@ -2,6 +2,75 @@
 //We've got some basic info about Karen's home
 //Debug the type of data provided
 //Return the types concatenated in a single variable
+ function moreAboutHome(address, distanceFromTown, hasNeighbours) {
+    var temp = typeof (address);
+    var temp1 = typeof (distanceFromTown);
+    var temp2 = typeof (hasNeighbours);
+    return temp + temp1 + temp2;
+}
+ function moreAboutKaren(parents, noOfSiblings, isNuclearFamily) {
+    var check;
+    if (typeof (parents) == "string" && typeof (isNuclearFamily) == "boolean") {
+        check = true;
+        return check && Number.isInteger(noOfSiblings);
+    } else {
+        return false;
+    }
+}
+function doesFriendExist(ageInText, ageInNumber) {
+    let temp;
+    if (isNaN(ageInText) == true) {
+        return ageInText;
+    } else {
+        return ageInNumber;
+    }
+}
+function sweetTooth(totalNoofSweets, sweetsConsumeByKaren, sweetsConsumedInNMeters, metersToTravel) {
+    let sweetconsumedbykarenfriend;
+    if (Number.isInteger(totalNoofSweets) && Number.isInteger(sweetsConsumeByKaren) && Number.isInteger(sweetsConsumedInNMeters) && Number.isInteger(metersToTravel)) {
+        sweetconsumedbykarenfriend = totalNoofSweets - (sweetsConsumeByKaren + sweetsConsumedInNMeters * metersToTravel);
+        return sweetconsumedbykarenfriend / 2;
+    } else {
+        return "No sweets for Karen's friend";
+    }
+}
+function convertToCelsius(fahrenheit) {
+
+    if (typeof (fahrenheit) == "string" || typeof (fahrenheit) == "undefined" || typeof (fahrenheit) == "object") {
+        return "Technical Error!";
+    } else {
+        return 5 / 9 * (fahrenheit - 32);
+    }
+
+}
+function aDifficultChoice(choice) {
+    switch (choice) {
+        case 1:
+            return "Take her daughter to a doctor";
+            break;
+        case 2:
+            return "Talk to her husband about it";
+            break;
+        case 3:
+            return "Counsel her daughter herself";
+            break;
+        case 4:
+            return "Lock her daughter in her room";
+            break;
+        case -1:
+            return "Break down and give up all hope";
+            break;
+        case undefined:
+            return "Wasn't able to decide";
+            break;
+        default:
+            return "Refused to do anything for Karen";
+
+    }
+}
+
+
+
 
 //Progression 2:
 //Check if the data given is of the right type
